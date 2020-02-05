@@ -1,18 +1,17 @@
 #pragma once
-#include"gameNode.h"
-#include"Player_Move.h"
+#include"base/gameNode.h"
+#include "testScene.h"
 
-class mainGame : public gameNode
+class mainGame :  public gameNode
 {
-private:
-	Player_Move* _playerMove;
 public:
 	mainGame();
 	~mainGame();
 
-	virtual HRESULT init();
-	virtual void release();
-	virtual void update();
-	virtual void render(/*HDC hdc*/);
+	virtual HRESULT init();	//초기화
+	virtual void release();//해제
+	virtual void update();//연산하는곳
+	virtual void render(/*HDC hdc*/);//그리는곳
+
 };
 
